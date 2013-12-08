@@ -20,8 +20,6 @@ Z=f(ffun,X,Y);
 surf(X,Y,Z)
 view(0,90)
 
-
-
 Lb=-bound*ones(1,nd);
 Ub=bound*ones(1,nd);
 
@@ -32,7 +30,6 @@ end
 fitness=10^10*ones(n,1);
 fmin=10^10;
 bestagent=agent(1,:);
-
 
 while (fmin>error),
     
@@ -62,6 +59,7 @@ while (fmin>error),
     stepsize=0.01*step.*bsxfun(@minus,agent,best); %bsxfun @minus subtracts a vector from every row of a matrix
     
     agent=agent+stepsize.*randn(n,nd);
+    
     
     clf
     surf(X,Y,Z)
@@ -159,7 +157,7 @@ switch c
     case 36 
     z=(x1.^2 + x2.^2 - 2*x1).^2 + x1/4;
     otherwise
-        disp('derp');
+    disp('error');
 end
 
 end

@@ -3,10 +3,10 @@ function Hahn_bp_iris
 clear all
 clc
 
-
 load fisheriris
 
-j=randperm(size(meas,1));
+% j=randperm(size(meas,1));
+j=1:(size(meas,1))
 
 pattern=meas(j,:);
 category=[];
@@ -16,26 +16,26 @@ for i=j
     
 if strcmp(species{i},'setosa')
 
-category=[category; [0 0 1]];
+    category=[category; [0 0 1]];
 
 end    
     
     
 if strcmp(species{i},'versicolor')
 
-category=[category; [0 1 0]];
+    category=[category; [0 1 0]];
 
 end    
 
 if strcmp(species{i},'virginica')
 
-category=[category; [1 0 0]];
+    category=[category; [1 0 0]];
 
 end
 
 end
 
-category
+plot(category','rx')
 pause
 
 
@@ -55,7 +55,7 @@ w2 = 0.3*(1-2*rand(n2,n3));
 dw1 = zeros(size(w1));            
 dw2 = zeros(size(w2)); 
 
-L = 0.001;        % Learning     
+L = 0.001;    % Learning     
 M = 0.8;      % Momentum
 
 loop = 0;                              
@@ -66,24 +66,24 @@ while sse > 0.001
     
     act1 = [af(pattern * w1) bias];      
     act2 = af(act1 * w2);
+    round(act2)
     
-   
     
     error = category - act2;
-    sse = sum(sum(error.^2))
+    sse = sum(sum(error.^2));
     
-   
-    plot(act2,'bo','MarkerSize',20)
-    hold on
-    plot(category,'rx','MarkerSize',20)
-    hold off
-% 
-%     subplot(121)
-%     imagesc(w1)
-%     subplot(122)
-%     imagesc(w2)
-%     colormap(gray)
-%     
+%    
+%     plot(act2,'bo','MarkerSize',20)
+%     hold on
+%     plot(category,'rx','MarkerSize',20)
+%     hold off
+
+    subplot(121)
+    imagesc(w1)
+    subplot(122)
+    imagesc(w2)
+    colormap(gray)
+    
     drawnow()
 %     pause
         
