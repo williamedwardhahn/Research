@@ -3,7 +3,7 @@ function L = Hahn_landscapes()
 
 size_search_space=1;
 
-resolution=200;
+resolution=20;
 
 [X,Y] = meshgrid(-size_search_space:size_search_space/resolution:size_search_space, -size_search_space:size_search_space/resolution:size_search_space);
 
@@ -16,7 +16,7 @@ figure(1)
 subplot(6,6,i)
 axis([-size_search_space, size_search_space, -size_search_space, size_search_space]);
 surf(X,Y,z,'EdgeColor','none')
-view(0,90)
+% view(0,90)
 
 
 
