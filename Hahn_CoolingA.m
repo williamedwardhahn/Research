@@ -13,7 +13,7 @@ N=100;
 j=1:N;
 
 clf;
-
+set(gcf,'color','w');
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%/   
@@ -23,7 +23,7 @@ clf;
 	
 	%subplot(3,3,1)
 	
-	%plot(t)
+	%plot(t,'LineWidth',1.5)
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%/   
 
@@ -33,7 +33,7 @@ clf;
 	
 	subplot(3,3,1)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
 	title('t(j)=t0*(tN/t0)^(j/N)')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%/   
@@ -46,7 +46,7 @@ clf;
 	
 	subplot(3,3,2)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('A=((t0-tN)*(N+1))/N;B=t0-A;t(j)=2*(A/(j+1)+B)')
 
 
@@ -58,7 +58,7 @@ clf;
 	
 	subplot(3,3,3)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
 	title('A=log(t0-tN)/log(N);t(j)=-(t0-j.^A)')
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%/   
@@ -68,7 +68,7 @@ clf;
 	
 	subplot(3,3,4)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('t(j)=(t0-tN)/(1+exp(.3*(j-N/2)))+tN;')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%/   
@@ -78,7 +78,7 @@ clf;
 	
 	subplot(3,3,5)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('t(j)=(1/2)*(t0-tN)*(1+cos(j*pi/N))+tN')
 	
 	
@@ -89,7 +89,7 @@ clf;
 	
 	subplot(3,3,6)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('t(j)=(1/2)*(t0-tN)*(1-tanh(10*j/N-5))+tN')
 	
 	
@@ -101,7 +101,7 @@ clf;
 	
 	subplot(3,3,7)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('t(j)=(t0-tN)/(cosh(10*j/N))+tN')
 	
 	
@@ -113,7 +113,7 @@ clf;
 	
 	subplot(3,3,8)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('A=(1/N)*log(t0/tN);t(j)=t0*exp(-A*j)')
 	
 	
@@ -125,7 +125,7 @@ clf;
 	
 	subplot(3,3,9)
 	
-	plot(t)
+	plot(t,'LineWidth',1.5)
     title('A=(1/N^2)*log(t0/tN);t(j)=t0*exp(-A*j^2)')
 	
 	

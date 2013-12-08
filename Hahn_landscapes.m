@@ -8,14 +8,16 @@ resolution=20;
 [X,Y] = meshgrid(-size_search_space:size_search_space/resolution:size_search_space, -size_search_space:size_search_space/resolution:size_search_space);
 
 
-for i = 1:36
+for i = 1
     
 z=fitness(i,X,Y);
 
 figure(1)
-subplot(6,6,i)
+% subplot(6,6,i)
 axis([-size_search_space, size_search_space, -size_search_space, size_search_space]);
 surf(X,Y,z,'EdgeColor','none')
+set(gcf,'color','w');
+
 % view(0,90)
 
 
