@@ -1,19 +1,19 @@
-function Hahn_bp_xor
+function Hahn_bp_function1
 
 clear all
 clc
 
-x=[0:.1:2]
+x=[0:.2:12]
 
 % y=10.*x+0.5;
 % y=x.^2;
-   y=abs(sin(x));
+%   y=abs(sin(x));
 %y=sin(2.*x)+x;
 %  y=x.^2+20.*rand(size(x));
 %   y=exp(-(x-10).^2)+0.*rand(size(x));
 
 %  y=exp(-(x-4).^2);
-%  y=10.*exp(-(x-4).^2)+sin(2.*x)+x;
+ y=10.*exp(-(x-4).^2)+sin(2.*x)+x;
 
 
 x=x/norm(x);
@@ -38,8 +38,8 @@ w2 = 0.05*(1-2*rand(n2,n3));
 dw1 = zeros(size(w1));            
 dw2 = zeros(size(w2)); 
 
-L = 0.001;        % Learning     
-M = 0.8;      % Momentum
+L = 1;      % Learning     
+M = 0;      % Momentum
 
 loop = 0;                              
 sse=1;
@@ -53,9 +53,9 @@ while sse > 0.0001
     
     error = category - act2;
     sse = sum(error.^2)
-    plot(act2,'bx')
+    plot(act2,'pr','MarkerSize',25,'MarkerFaceColor','r')
     hold on
-    plot(category,'ro')
+    plot(category,'ob','MarkerSize',25)
     hold off
     drawnow()
     

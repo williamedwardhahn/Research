@@ -2,12 +2,12 @@ function [best,fmin]=Hahn_cuckoo_searchA()
 %William Hahn
 tic
 clf
-n=5; %Number of Agents
-prob=0.5; %Probability of Discovery
-error=-1000%1.0e-5; %Error/fitness
-nd=2; %Number of Dimensions
-bound = 10; %Size of Original Search Space
-beta=1; %3/2; Levy Flight Parameters
+n=5; %agents
+prob=0.5; 
+error=-1000%1.0e-5; %error
+nd=2; %dimension
+bound = 10; %bound
+beta=1; %levy
 sigma=(gamma(1+beta)*sin(pi*beta/2)/(gamma((1+beta)/2)*beta*2^((beta-1)/2)))^(1/beta)
 
 ffun=7;

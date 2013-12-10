@@ -2,11 +2,11 @@ function [best,fmin]=Hahn_cuckoo_searchA()
 %William Hahn
 tic
 clf
-n=10; %Number of Agents
-prob=0.5; %Probability of Discovery
-error=.51%1.0e-5; %Error/fitness
-nd=2; %Number of Dimensions
-bound = 2; %Size of Original Search Space
+n=10; %agents
+prob=0.5; %
+error=.51%1.0e-5; 
+nd=2; %dimensions
+bound = 2; %search bound
 
 resolution=20;
 
