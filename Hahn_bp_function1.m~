@@ -6,8 +6,8 @@ set(gcf,'color','w');
 
 x=[0:.2:12]
 
-y=10.*x+0.5;
-% y=x.^2;
+% y=10.*x+0.5;
+y=x.^2;
 %   y=abs(sin(x));
 %y=sin(2.*x)+x;
 %  y=x.^2+20.*rand(size(x));
